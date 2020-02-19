@@ -1,11 +1,10 @@
 <h1>你想對誰說幹話?</h1>
 
-
 <div>
   <form method="POST" action="/">
     <div>
       <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg">
-      <input type='radio' name="engineer" id="engineer">
+      <input type='radio' name="job" id="engineer" value="engineer">
       <label for="engineer">
         工程師
       </label>
@@ -13,7 +12,7 @@
 
     <div>
       <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg">
-      <input type='radio' name="designer" id="designer">
+      <input type='radio' name="job" id="designer" value="designer">
       <label for="designer">
         設計師
       </label>
@@ -21,24 +20,24 @@
 
     <div>
       <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg">
-      <input type='radio' name="entrepreneur" id="entrepreneur">
+      <input type='radio' name="job" id="entrepreneur" value="entrepreneur">
       <label for="entrepreneur">
         創業家
       </label>
     </div>
-  </form>
-
-  <div>
-    <button>產生幹話</button>
 
     <div>
-      身為一個
-      <span>Job</span>
-      <span>Task</span>
-      <span>Comment</span>
-      吧!
+      <button type="submit">產生幹話</button>
+
+      {{#if expression}}
+        <div>
+          身為一個<span>{{expression}}</span>吧!
+        </div>
+      {{/if}}
     </div>
-  </div>
+  </form>
+
+  <footer>Z.R Huang :D</footer>
 
 
 </div>

@@ -1,6 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
+const generateBullshit = require('./generate_bullshit')
 const app = express()
 const port = 3000
 
@@ -17,7 +18,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  res.render('index')
+  const option = req.body
+  const expression = generateBullshit(option.job)
+  res.render('index', { expression: expression })
 })
 
 app.listen(port, () => {
