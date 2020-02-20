@@ -26,7 +26,7 @@ function generateBullshit(jobName) {
   const selectedTask = task[jobName][getRandomIndex(task[jobName])]
   const selectedPhrase = phrase[getRandomIndex(phrase)]
 
-  return selectedJob + selectedTask + selectedPhrase
+  return '身為一個' + selectedJob + selectedTask + selectedPhrase + '吧!'
 }
 
 module.exports = generateBullshit

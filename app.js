@@ -20,7 +20,18 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   const option = req.body
   const expression = generateBullshit(option.job)
-  res.render('index', { expression: expression })
+  let checkedItem = {}
+
+  if (option.job === 'engineer') {
+    checkedItem = { engineer: 'true' }
+  } else if (option.job === 'designer') {
+    checkedItem = { designer: 'true' }
+  } else {
+    checkedItem = { entrepreneur: 'true' }
+  }
+
+  console.log('checkedItem', checkedItem)
+  res.render('index', { expression: expression, checkedItem: checkedItem })
 })
 
 app.listen(port, () => {
