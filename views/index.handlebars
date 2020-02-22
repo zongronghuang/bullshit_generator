@@ -1,16 +1,12 @@
 <h1 class="mx-auto text-center my-3 text-monospace">你想對誰說幹話?</h1>
 
-
 <form method="POST" action="/" class="container">
 
   <div class="d-flex justify-content-between">
-
+    {{! card 1}}
     <div class="card mr-1 mb-4 shadow" style="width: 18rem;">
-
       <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
-        class="card-img-top " alt="工程師">
-
-
+        class="card-img-top" style="object-fit: cover;height: 15rem;" alt="工程師">
       <div class="card-body text-center">
         <input type='radio' name="job" id="engineer" value="engineer" {{#if checkedItem.engineer}} checked {{/if}}>
         <label for="engineer" class="mb-0">
@@ -19,9 +15,10 @@
       </div>
     </div>
 
+    {{! card 2}}
     <div class="card mx-auto mb-4 d-flex shadow" style="width: 18rem;">
       <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
-        class="card-img-top" alt="設計師">
+        class="card-img-top" style="object-fit: cover; height: 15rem;" alt="設計師">
       <div class="card-body text-center">
         <input type='radio' name="job" id="designer" value="designer" {{#if checkedItem.designer}} checked {{/if}}>
         <label for="designer">
@@ -30,9 +27,10 @@
       </div>
     </div>
 
+    {{!card 3}}
     <div class="card ml-1 mb-4 d-flex shadow" style="width: 18rem;">
       <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
-        class="card-img-top" alt="創業家">
+        class="card-img-top" style="object-fit: cover;height: 15rem;" alt="創業家">
       <div class="card-body text-center">
         <input type='radio' name="job" id="entrepreneur" value="entrepreneur" {{#if checkedItem.entrepreneur}} checked
           {{/if}}>
@@ -42,8 +40,6 @@
       </div>
     </div>
   </div>
-
-
 
   <div class="w-100 d-flex justify-content-between">
     <button type="submit" class="rounded text-white bg-success shadow-sm" style="height: 80px;">產生幹話</button>
@@ -56,6 +52,5 @@
   </div>
 
   </div>
-
 
 </form>
